@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Dự đoán Giá Nhà California</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Dự đoán Giá Nhà California</h1>
+    <form action="/" method="post">
+        <!-- Các trường nhập liệu -->
+        <label>Longitude: <input type="text" name="longitude" required></label><br>
+        <label>Latitude: <input type="text" name="latitude" required></label><br>
+        <label>Housing Median Age: <input type="text" name="housing_median_age" required></label><br>
+        <label>Total Rooms: <input type="text" name="total_rooms" required></label><br>
+        <label>Total Bedrooms: <input type="text" name="total_bedrooms" required></label><br>
+        <label>Population: <input type="text" name="population" required></label><br>
+        <label>Households: <input type="text" name="households" required></label><br>
+        <label>Median Income: <input type="text" name="median_income" required></label><br>
+        <!-- Biến phân loại ocean_proximity -->
+        <label>Ocean Proximity:
+            <select name="ocean_proximity" required>
+                <option value="NEAR BAY">NEAR BAY</option>
+                <option value="<1H OCEAN"><1H OCEAN</option>
+                <option value="INLAND">INLAND</option>
+                <option value="NEAR OCEAN">NEAR OCEAN</option>
+                <option value="ISLAND">ISLAND</option>
+            </select>
+        </label><br>
+        <!-- Lựa chọn mô hình -->
+        <label>Mô hình dự đoán:
+            <select name="model" required>
+                <option value="Linear Regression">Linear Regression</option>
+                <option value="Ridge Regression">Ridge Regression</option>
+                <option value="Neural Network">Neural Network</option>
+                <option value="Stacking Regressor">Stacking Regressor</option>
+            </select>
+        </label><br>
+        <input type="submit" value="Dự đoán">
+    </form>
+</body>
+</html>
