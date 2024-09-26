@@ -28,3 +28,11 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #48A;
 }
+
+p {
+    font-size: 1.2em;
+}
+
+strong {
+    color: #005;
+}
